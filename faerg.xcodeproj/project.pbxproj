@@ -3,552 +3,284 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03C7A19C20397F93009ACD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A19B20397F93009ACD89 /* AppDelegate.swift */; };
-		03C7A19E20397F93009ACD89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A19D20397F93009ACD89 /* ViewController.swift */; };
-		03C7A1A020397F93009ACD89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C7A19F20397F93009ACD89 /* Assets.xcassets */; };
-		03C7A1A320397F93009ACD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C7A1A120397F93009ACD89 /* Main.storyboard */; };
-		03C7A1AF20397F94009ACD89 /* faergTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A1AE20397F94009ACD89 /* faergTests.swift */; };
-		03C7A1BA20397F94009ACD89 /* faergUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A1B920397F94009ACD89 /* faergUITests.swift */; };
+		0399B30817F35D84005ACCBE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0399B30717F35D84005ACCBE /* SDL2.framework */; };
+		03C7A1D12039B5B5009ACD89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */; };
+		03C7A1D22039B5B5009ACD89 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A1CF2039B5B5009ACD89 /* main.c */; };
+		03C7A1D62039E9E9009ACD89 /* faerg_mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A1D52039E9E9009ACD89 /* faerg_mac.m */; };
+		03FD05B917F3626700E1F97F /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0399B30717F35D84005ACCBE /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		03C7A1AB20397F94009ACD89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03C7A19020397F93009ACD89 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03C7A19720397F93009ACD89;
-			remoteInfo = faerg;
+/* Begin PBXCopyFilesBuildPhase section */
+		03FD05B817F361CA00E1F97F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03FD05B917F3626700E1F97F /* SDL2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03C7A1B620397F94009ACD89 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03C7A19020397F93009ACD89 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03C7A19720397F93009ACD89;
-			remoteInfo = faerg;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		03C7A19820397F93009ACD89 /* faerg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faerg.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C7A19B20397F93009ACD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03C7A19D20397F93009ACD89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		03C7A19F20397F93009ACD89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		03C7A1A220397F93009ACD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		03C7A1A420397F93009ACD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03C7A1A520397F93009ACD89 /* faerg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = faerg.entitlements; sourceTree = "<group>"; };
-		03C7A1AA20397F94009ACD89 /* faergTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = faergTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C7A1AE20397F94009ACD89 /* faergTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faergTests.swift; sourceTree = "<group>"; };
-		03C7A1B020397F94009ACD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03C7A1B520397F94009ACD89 /* faergUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = faergUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C7A1B920397F94009ACD89 /* faergUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faergUITests.swift; sourceTree = "<group>"; };
-		03C7A1BB20397F94009ACD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0399B2E717F35C1D005ACCBE /* faerg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faerg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0399B30717F35D84005ACCBE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "faerg-Info.plist"; sourceTree = "<group>"; };
+		03C7A1CE2039B5B5009ACD89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03C7A1CF2039B5B5009ACD89 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		03C7A1D32039D42B009ACD89 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		03C7A1D42039E9E9009ACD89 /* faerg_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_mac.h; sourceTree = "<group>"; };
+		03C7A1D52039E9E9009ACD89 /* faerg_mac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = faerg_mac.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		03C7A19520397F93009ACD89 /* Frameworks */ = {
+		0399B2E417F35C1D005ACCBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C7A1A720397F94009ACD89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C7A1B220397F94009ACD89 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0399B30817F35D84005ACCBE /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C7A18F20397F93009ACD89 = {
+		0399B2DE17F35C1D005ACCBE = {
 			isa = PBXGroup;
 			children = (
-				03C7A19A20397F93009ACD89 /* faerg */,
-				03C7A1AD20397F94009ACD89 /* faergTests */,
-				03C7A1B820397F94009ACD89 /* faergUITests */,
-				03C7A19920397F93009ACD89 /* Products */,
+				03C7A1CB2039B5B5009ACD89 /* faerg */,
+				0399B30717F35D84005ACCBE /* SDL2.framework */,
+				0399B2E917F35C1D005ACCBE /* Frameworks */,
+				0399B2E817F35C1D005ACCBE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		03C7A19920397F93009ACD89 /* Products */ = {
+		0399B2E817F35C1D005ACCBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03C7A19820397F93009ACD89 /* faerg.app */,
-				03C7A1AA20397F94009ACD89 /* faergTests.xctest */,
-				03C7A1B520397F94009ACD89 /* faergUITests.xctest */,
+				0399B2E717F35C1D005ACCBE /* faerg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		03C7A19A20397F93009ACD89 /* faerg */ = {
+		0399B2E917F35C1D005ACCBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03C7A19B20397F93009ACD89 /* AppDelegate.swift */,
-				03C7A19D20397F93009ACD89 /* ViewController.swift */,
-				03C7A19F20397F93009ACD89 /* Assets.xcassets */,
-				03C7A1A120397F93009ACD89 /* Main.storyboard */,
-				03C7A1A420397F93009ACD89 /* Info.plist */,
-				03C7A1A520397F93009ACD89 /* faerg.entitlements */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03C7A1CB2039B5B5009ACD89 /* faerg */ = {
+			isa = PBXGroup;
+			children = (
+				03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */,
+				03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */,
+				03C7A1D32039D42B009ACD89 /* main.h */,
+				03C7A1CF2039B5B5009ACD89 /* main.c */,
+				03C7A1D42039E9E9009ACD89 /* faerg_mac.h */,
+				03C7A1D52039E9E9009ACD89 /* faerg_mac.m */,
 			);
 			path = faerg;
-			sourceTree = "<group>";
-		};
-		03C7A1AD20397F94009ACD89 /* faergTests */ = {
-			isa = PBXGroup;
-			children = (
-				03C7A1AE20397F94009ACD89 /* faergTests.swift */,
-				03C7A1B020397F94009ACD89 /* Info.plist */,
-			);
-			path = faergTests;
-			sourceTree = "<group>";
-		};
-		03C7A1B820397F94009ACD89 /* faergUITests */ = {
-			isa = PBXGroup;
-			children = (
-				03C7A1B920397F94009ACD89 /* faergUITests.swift */,
-				03C7A1BB20397F94009ACD89 /* Info.plist */,
-			);
-			path = faergUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		03C7A19720397F93009ACD89 /* faerg */ = {
+		0399B2E617F35C1D005ACCBE /* faerg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03C7A1BE20397F94009ACD89 /* Build configuration list for PBXNativeTarget "faerg" */;
+			buildConfigurationList = 0399B30417F35C1D005ACCBE /* Build configuration list for PBXNativeTarget "faerg" */;
 			buildPhases = (
-				03C7A19420397F93009ACD89 /* Sources */,
-				03C7A19520397F93009ACD89 /* Frameworks */,
-				03C7A19620397F93009ACD89 /* Resources */,
+				0399B2E317F35C1D005ACCBE /* Sources */,
+				0399B2E417F35C1D005ACCBE /* Frameworks */,
+				0399B2E517F35C1D005ACCBE /* Resources */,
+				03FD05B817F361CA00E1F97F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = faerg;
-			productName = faerg;
-			productReference = 03C7A19820397F93009ACD89 /* faerg.app */;
+			productName = SDL2_template;
+			productReference = 0399B2E717F35C1D005ACCBE /* faerg.app */;
 			productType = "com.apple.product-type.application";
-		};
-		03C7A1A920397F94009ACD89 /* faergTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03C7A1C120397F94009ACD89 /* Build configuration list for PBXNativeTarget "faergTests" */;
-			buildPhases = (
-				03C7A1A620397F94009ACD89 /* Sources */,
-				03C7A1A720397F94009ACD89 /* Frameworks */,
-				03C7A1A820397F94009ACD89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03C7A1AC20397F94009ACD89 /* PBXTargetDependency */,
-			);
-			name = faergTests;
-			productName = faergTests;
-			productReference = 03C7A1AA20397F94009ACD89 /* faergTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		03C7A1B420397F94009ACD89 /* faergUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03C7A1C420397F94009ACD89 /* Build configuration list for PBXNativeTarget "faergUITests" */;
-			buildPhases = (
-				03C7A1B120397F94009ACD89 /* Sources */,
-				03C7A1B220397F94009ACD89 /* Frameworks */,
-				03C7A1B320397F94009ACD89 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03C7A1B720397F94009ACD89 /* PBXTargetDependency */,
-			);
-			name = faergUITests;
-			productName = faergUITests;
-			productReference = 03C7A1B520397F94009ACD89 /* faergUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		03C7A19020397F93009ACD89 /* Project object */ = {
+		0399B2DF17F35C1D005ACCBE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "Harry Lundström";
-				TargetAttributes = {
-					03C7A19720397F93009ACD89 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					03C7A1A920397F94009ACD89 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 03C7A19720397F93009ACD89;
-					};
-					03C7A1B420397F94009ACD89 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 03C7A19720397F93009ACD89;
-					};
-				};
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = D;
 			};
-			buildConfigurationList = 03C7A19320397F93009ACD89 /* Build configuration list for PBXProject "faerg" */;
-			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = en;
+			buildConfigurationList = 0399B2E217F35C1D005ACCBE /* Build configuration list for PBXProject "faerg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 03C7A18F20397F93009ACD89;
-			productRefGroup = 03C7A19920397F93009ACD89 /* Products */;
+			mainGroup = 0399B2DE17F35C1D005ACCBE;
+			productRefGroup = 0399B2E817F35C1D005ACCBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03C7A19720397F93009ACD89 /* faerg */,
-				03C7A1A920397F94009ACD89 /* faergTests */,
-				03C7A1B420397F94009ACD89 /* faergUITests */,
+				0399B2E617F35C1D005ACCBE /* faerg */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		03C7A19620397F93009ACD89 /* Resources */ = {
+		0399B2E517F35C1D005ACCBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C7A1A020397F93009ACD89 /* Assets.xcassets in Resources */,
-				03C7A1A320397F93009ACD89 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C7A1A820397F94009ACD89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C7A1B320397F94009ACD89 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				03C7A1D12039B5B5009ACD89 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		03C7A19420397F93009ACD89 /* Sources */ = {
+		0399B2E317F35C1D005ACCBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C7A19E20397F93009ACD89 /* ViewController.swift in Sources */,
-				03C7A19C20397F93009ACD89 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C7A1A620397F94009ACD89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03C7A1AF20397F94009ACD89 /* faergTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03C7A1B120397F94009ACD89 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03C7A1BA20397F94009ACD89 /* faergUITests.swift in Sources */,
+				03C7A1D22039B5B5009ACD89 /* main.c in Sources */,
+				03C7A1D62039E9E9009ACD89 /* faerg_mac.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		03C7A1AC20397F94009ACD89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03C7A19720397F93009ACD89 /* faerg */;
-			targetProxy = 03C7A1AB20397F94009ACD89 /* PBXContainerItemProxy */;
-		};
-		03C7A1B720397F94009ACD89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03C7A19720397F93009ACD89 /* faerg */;
-			targetProxy = 03C7A1B620397F94009ACD89 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		03C7A1A120397F93009ACD89 /* Main.storyboard */ = {
+		03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				03C7A1A220397F93009ACD89 /* Base */,
+				03C7A1CE2039B5B5009ACD89 /* en */,
 			);
-			name = Main.storyboard;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		03C7A1BC20397F94009ACD89 /* Debug */ = {
+		0399B30217F35C1D005ACCBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		03C7A1BD20397F94009ACD89 /* Release */ = {
+		0399B30317F35C1D005ACCBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
-		03C7A1BF20397F94009ACD89 /* Debug */ = {
+		0399B30517F35C1D005ACCBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = faerg/faerg.entitlements;
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QM9YTQA8XQ;
-				INFOPLIST_FILE = faerg/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrylundstrom.faerg;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = c89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_PEDANTIC = YES;
+				INFOPLIST_FILE = "faerg/faerg-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		03C7A1C020397F94009ACD89 /* Release */ = {
+		0399B30617F35C1D005ACCBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = faerg/faerg.entitlements;
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QM9YTQA8XQ;
-				INFOPLIST_FILE = faerg/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrylundstrom.faerg;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = c89;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_PEDANTIC = YES;
+				INFOPLIST_FILE = "faerg/faerg-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		03C7A1C220397F94009ACD89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QM9YTQA8XQ;
-				INFOPLIST_FILE = faergTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrylundstrom.faergTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/faerg.app/Contents/MacOS/faerg";
-			};
-			name = Debug;
-		};
-		03C7A1C320397F94009ACD89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QM9YTQA8XQ;
-				INFOPLIST_FILE = faergTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrylundstrom.faergTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/faerg.app/Contents/MacOS/faerg";
-			};
-			name = Release;
-		};
-		03C7A1C520397F94009ACD89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QM9YTQA8XQ;
-				INFOPLIST_FILE = faergUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrylundstrom.faergUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = faerg;
-			};
-			name = Debug;
-		};
-		03C7A1C620397F94009ACD89 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = QM9YTQA8XQ;
-				INFOPLIST_FILE = faergUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.harrylundstrom.faergUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = faerg;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03C7A19320397F93009ACD89 /* Build configuration list for PBXProject "faerg" */ = {
+		0399B2E217F35C1D005ACCBE /* Build configuration list for PBXProject "faerg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03C7A1BC20397F94009ACD89 /* Debug */,
-				03C7A1BD20397F94009ACD89 /* Release */,
+				0399B30217F35C1D005ACCBE /* Debug */,
+				0399B30317F35C1D005ACCBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03C7A1BE20397F94009ACD89 /* Build configuration list for PBXNativeTarget "faerg" */ = {
+		0399B30417F35C1D005ACCBE /* Build configuration list for PBXNativeTarget "faerg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03C7A1BF20397F94009ACD89 /* Debug */,
-				03C7A1C020397F94009ACD89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03C7A1C120397F94009ACD89 /* Build configuration list for PBXNativeTarget "faergTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03C7A1C220397F94009ACD89 /* Debug */,
-				03C7A1C320397F94009ACD89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03C7A1C420397F94009ACD89 /* Build configuration list for PBXNativeTarget "faergUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03C7A1C520397F94009ACD89 /* Debug */,
-				03C7A1C620397F94009ACD89 /* Release */,
+				0399B30517F35C1D005ACCBE /* Debug */,
+				0399B30617F35C1D005ACCBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 03C7A19020397F93009ACD89 /* Project object */;
+	rootObject = 0399B2DF17F35C1D005ACCBE /* Project object */;
 }

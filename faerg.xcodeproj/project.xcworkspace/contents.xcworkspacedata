@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:faerg.xcodeproj">
+      location = "self:/Users/d/Documents/xcode-workspace/faerg-sdl2/faerg.xcodeproj">
    </FileRef>
 </Workspace>
