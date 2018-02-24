@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0357D5BB20418728002FF3AF /* chars_gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_gfx.h; sourceTree = "<group>"; };
 		0399B2E717F35C1D005ACCBE /* faerg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faerg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0399B30717F35D84005ACCBE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "faerg-Info.plist"; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		03C7A1CB2039B5B5009ACD89 /* faerg */ = {
 			isa = PBXGroup;
 			children = (
+				0357D5BB20418728002FF3AF /* chars_gfx.h */,
 				03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */,
 				03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */,
 				03C7A1D32039D42B009ACD89 /* main.h */,
