@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0357D5E32041EE8C002FF3AF /* nfd_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5DB2041EE8C002FF3AF /* nfd_cocoa.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		0357D5E42041EE8C002FF3AF /* nfd_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5DD2041EE8C002FF3AF /* nfd_common.c */; };
+		0357D5E72041F026002FF3AF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0357D5E62041F025002FF3AF /* AppKit.framework */; };
+		0357D5EE2041F0AA002FF3AF /* faerg_mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5EC2041F0AA002FF3AF /* faerg_mac.m */; };
+		0357D5EF2041F0AA002FF3AF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5ED2041F0AA002FF3AF /* main.c */; };
 		0399B30817F35D84005ACCBE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0399B30717F35D84005ACCBE /* SDL2.framework */; };
 		03C7A1D12039B5B5009ACD89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */; };
-		03C7A1D22039B5B5009ACD89 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A1CF2039B5B5009ACD89 /* main.c */; };
-		03C7A1D62039E9E9009ACD89 /* faerg_mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C7A1D52039E9E9009ACD89 /* faerg_mac.m */; };
 		03FD05B917F3626700E1F97F /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0399B30717F35D84005ACCBE /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -28,15 +31,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0357D5BB20418728002FF3AF /* chars_gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_gfx.h; sourceTree = "<group>"; };
+		0357D5BC2041AD4C002FF3AF /* faerg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = faerg.entitlements; sourceTree = "<group>"; };
+		0357D5D62041EE8C002FF3AF /* nfd_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nfd_common.h; sourceTree = "<group>"; };
+		0357D5DA2041EE8C002FF3AF /* nfd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nfd.h; sourceTree = "<group>"; };
+		0357D5DB2041EE8C002FF3AF /* nfd_cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nfd_cocoa.m; sourceTree = "<group>"; };
+		0357D5DC2041EE8C002FF3AF /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		0357D5DD2041EE8C002FF3AF /* nfd_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nfd_common.c; sourceTree = "<group>"; };
+		0357D5E62041F025002FF3AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0357D5E92041F0AA002FF3AF /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		0357D5EA2041F0AA002FF3AF /* faerg_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faerg_mac.h; sourceTree = "<group>"; };
+		0357D5EB2041F0AA002FF3AF /* chars_gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_gfx.h; sourceTree = "<group>"; };
+		0357D5EC2041F0AA002FF3AF /* faerg_mac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faerg_mac.m; sourceTree = "<group>"; };
+		0357D5ED2041F0AA002FF3AF /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0399B2E717F35C1D005ACCBE /* faerg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faerg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0399B30717F35D84005ACCBE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "faerg-Info.plist"; sourceTree = "<group>"; };
 		03C7A1CE2039B5B5009ACD89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		03C7A1CF2039B5B5009ACD89 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		03C7A1D32039D42B009ACD89 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		03C7A1D42039E9E9009ACD89 /* faerg_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_mac.h; sourceTree = "<group>"; };
-		03C7A1D52039E9E9009ACD89 /* faerg_mac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = faerg_mac.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0357D5E72041F026002FF3AF /* AppKit.framework in Frameworks */,
 				0399B30817F35D84005ACCBE /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,9 +62,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0357D5D22041EE8C002FF3AF /* nativefiledialog */ = {
+			isa = PBXGroup;
+			children = (
+				0357D5D52041EE8C002FF3AF /* src */,
+			);
+			path = nativefiledialog;
+			sourceTree = "<group>";
+		};
+		0357D5D52041EE8C002FF3AF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0357D5D62041EE8C002FF3AF /* nfd_common.h */,
+				0357D5DB2041EE8C002FF3AF /* nfd_cocoa.m */,
+				0357D5DC2041EE8C002FF3AF /* common.h */,
+				0357D5DD2041EE8C002FF3AF /* nfd_common.c */,
+				0357D5D92041EE8C002FF3AF /* include */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		0357D5D92041EE8C002FF3AF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0357D5DA2041EE8C002FF3AF /* nfd.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0357D5E82041F0AA002FF3AF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0357D5E92041F0AA002FF3AF /* main.h */,
+				0357D5ED2041F0AA002FF3AF /* main.c */,
+				0357D5EA2041F0AA002FF3AF /* faerg_mac.h */,
+				0357D5EC2041F0AA002FF3AF /* faerg_mac.m */,
+				0357D5EB2041F0AA002FF3AF /* chars_gfx.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		0399B2DE17F35C1D005ACCBE = {
 			isa = PBXGroup;
 			children = (
+				0357D5D22041EE8C002FF3AF /* nativefiledialog */,
 				03C7A1CB2039B5B5009ACD89 /* faerg */,
 				0399B30717F35D84005ACCBE /* SDL2.framework */,
 				0399B2E917F35C1D005ACCBE /* Frameworks */,
@@ -72,6 +124,7 @@
 		0399B2E917F35C1D005ACCBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0357D5E62041F025002FF3AF /* AppKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,13 +132,10 @@
 		03C7A1CB2039B5B5009ACD89 /* faerg */ = {
 			isa = PBXGroup;
 			children = (
-				0357D5BB20418728002FF3AF /* chars_gfx.h */,
+				0357D5E82041F0AA002FF3AF /* src */,
+				0357D5BC2041AD4C002FF3AF /* faerg.entitlements */,
 				03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */,
 				03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */,
-				03C7A1D32039D42B009ACD89 /* main.h */,
-				03C7A1CF2039B5B5009ACD89 /* main.c */,
-				03C7A1D42039E9E9009ACD89 /* faerg_mac.h */,
-				03C7A1D52039E9E9009ACD89 /* faerg_mac.m */,
 			);
 			path = faerg;
 			sourceTree = "<group>";
@@ -119,6 +169,15 @@
 			attributes = {
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = D;
+				TargetAttributes = {
+					0399B2E617F35C1D005ACCBE = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 0399B2E217F35C1D005ACCBE /* Build configuration list for PBXProject "faerg" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -153,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C7A1D22039B5B5009ACD89 /* main.c in Sources */,
-				03C7A1D62039E9E9009ACD89 /* faerg_mac.m in Sources */,
+				0357D5EE2041F0AA002FF3AF /* faerg_mac.m in Sources */,
+				0357D5EF2041F0AA002FF3AF /* main.c in Sources */,
+				0357D5E32041EE8C002FF3AF /* nfd_cocoa.m in Sources */,
+				0357D5E42041EE8C002FF3AF /* nfd_common.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +324,7 @@
 		0399B30517F35C1D005ACCBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = faerg/faerg.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = c89;
@@ -280,6 +342,7 @@
 		0399B30617F35C1D005ACCBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = faerg/faerg.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = c89;

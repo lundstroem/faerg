@@ -45,6 +45,7 @@ static void render_char(unsigned int *raster, int sprite_x, int sprite_y,
 static void render_panel(unsigned int *raster, int x, int y,
                          int w, int h);
 static void init_renderer(void);
+static void print_info(void);
 
 static struct MainContext main_context;
 
@@ -69,7 +70,7 @@ static unsigned int palette[16] = {
 
 int main (int argc, char **argv)
 {
-    /* todo: be able to open application with imagefile */
+    /* todo: be able to open application with imagefile, make sure that sandbox entitlements work */
     main_context.window = NULL;
     main_context.texture = NULL;
     main_context.renderer = NULL;
@@ -79,6 +80,7 @@ int main (int argc, char **argv)
     main_context.framebuffer = NULL;
     init_video();
     init_data();
+    print_info();
     update();
     quit();
     return 0;
@@ -96,6 +98,17 @@ static void init_video(void) {
                                            SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE
                                            );
     init_renderer();
+}
+
+static void print_info(void) {
+    SDL_version compiled;
+    SDL_version linked;
+    SDL_VERSION(&compiled);
+    SDL_GetVersion(&linked);
+    printf("We compiled against SDL version %d.%d.%d ...\n",
+           compiled.major, compiled.minor, compiled.patch);
+    printf("We are linking against SDL version %d.%d.%d.\n",
+           linked.major, linked.minor, linked.patch);
 }
 
 static void init_renderer(void) {

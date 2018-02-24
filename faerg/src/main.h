@@ -1,8 +1,8 @@
 #ifndef main_h
 #define main_h
 
-#ifndef vlk_bool_h
-#define vlk_bool_h
+#ifndef fbool_h
+#define fbool_h
 typedef int fbool;
 #define true 1
 #define false 0
