@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030ABBDF204A110E00169214 /* faerg_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBDE204A110E00169214 /* faerg_common.c */; };
+		030ABBE2204A164A00169214 /* faerg_data_structures.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBE1204A164A00169214 /* faerg_data_structures.c */; };
+		030ABBE5204A1D4E00169214 /* faerg_allocator.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBE4204A1D4E00169214 /* faerg_allocator.c */; };
+		030ABBE8204A295100169214 /* faerg_str.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBE7204A295100169214 /* faerg_str.c */; };
+		035750B42049F43400869A96 /* faerg_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 035750B32049F43400869A96 /* faerg_ui.c */; };
 		0357D5E32041EE8C002FF3AF /* nfd_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5DB2041EE8C002FF3AF /* nfd_cocoa.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		0357D5E42041EE8C002FF3AF /* nfd_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5DD2041EE8C002FF3AF /* nfd_common.c */; };
 		0357D5E72041F026002FF3AF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0357D5E62041F025002FF3AF /* AppKit.framework */; };
@@ -31,6 +36,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		030ABBDE204A110E00169214 /* faerg_common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_common.c; sourceTree = "<group>"; };
+		030ABBE0204A164A00169214 /* faerg_data_structures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_data_structures.h; sourceTree = "<group>"; };
+		030ABBE1204A164A00169214 /* faerg_data_structures.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_data_structures.c; sourceTree = "<group>"; };
+		030ABBE3204A1D4E00169214 /* faerg_allocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_allocator.h; sourceTree = "<group>"; };
+		030ABBE4204A1D4E00169214 /* faerg_allocator.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_allocator.c; sourceTree = "<group>"; };
+		030ABBE6204A295100169214 /* faerg_str.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_str.h; sourceTree = "<group>"; };
+		030ABBE7204A295100169214 /* faerg_str.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_str.c; sourceTree = "<group>"; };
+		035750B22049F43400869A96 /* faerg_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_ui.h; sourceTree = "<group>"; };
+		035750B32049F43400869A96 /* faerg_ui.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_ui.c; sourceTree = "<group>"; };
+		035750B52049F8FB00869A96 /* faerg_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_common.h; sourceTree = "<group>"; };
 		0357D5BC2041AD4C002FF3AF /* faerg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = faerg.entitlements; sourceTree = "<group>"; };
 		0357D5D62041EE8C002FF3AF /* nfd_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nfd_common.h; sourceTree = "<group>"; };
 		0357D5DA2041EE8C002FF3AF /* nfd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nfd.h; sourceTree = "<group>"; };
@@ -40,7 +55,7 @@
 		0357D5E62041F025002FF3AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0357D5E92041F0AA002FF3AF /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		0357D5EA2041F0AA002FF3AF /* faerg_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faerg_mac.h; sourceTree = "<group>"; };
-		0357D5EB2041F0AA002FF3AF /* chars_gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chars_gfx.h; sourceTree = "<group>"; };
+		0357D5EB2041F0AA002FF3AF /* faerg_chars_gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = faerg_chars_gfx.h; sourceTree = "<group>"; };
 		0357D5EC2041F0AA002FF3AF /* faerg_mac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = faerg_mac.m; sourceTree = "<group>"; };
 		0357D5ED2041F0AA002FF3AF /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0399B2E717F35C1D005ACCBE /* faerg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faerg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +112,17 @@
 				0357D5ED2041F0AA002FF3AF /* main.c */,
 				0357D5EA2041F0AA002FF3AF /* faerg_mac.h */,
 				0357D5EC2041F0AA002FF3AF /* faerg_mac.m */,
-				0357D5EB2041F0AA002FF3AF /* chars_gfx.h */,
+				0357D5EB2041F0AA002FF3AF /* faerg_chars_gfx.h */,
+				035750B22049F43400869A96 /* faerg_ui.h */,
+				035750B32049F43400869A96 /* faerg_ui.c */,
+				035750B52049F8FB00869A96 /* faerg_common.h */,
+				030ABBDE204A110E00169214 /* faerg_common.c */,
+				030ABBE0204A164A00169214 /* faerg_data_structures.h */,
+				030ABBE1204A164A00169214 /* faerg_data_structures.c */,
+				030ABBE3204A1D4E00169214 /* faerg_allocator.h */,
+				030ABBE4204A1D4E00169214 /* faerg_allocator.c */,
+				030ABBE6204A295100169214 /* faerg_str.h */,
+				030ABBE7204A295100169214 /* faerg_str.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -171,6 +196,8 @@
 				ORGANIZATIONNAME = D;
 				TargetAttributes = {
 					0399B2E617F35C1D005ACCBE = {
+						DevelopmentTeam = QM9YTQA8XQ;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -213,9 +240,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0357D5EE2041F0AA002FF3AF /* faerg_mac.m in Sources */,
+				030ABBE2204A164A00169214 /* faerg_data_structures.c in Sources */,
+				030ABBE8204A295100169214 /* faerg_str.c in Sources */,
 				0357D5EF2041F0AA002FF3AF /* main.c in Sources */,
 				0357D5E32041EE8C002FF3AF /* nfd_cocoa.m in Sources */,
+				035750B42049F43400869A96 /* faerg_ui.c in Sources */,
+				030ABBDF204A110E00169214 /* faerg_common.c in Sources */,
 				0357D5E42041EE8C002FF3AF /* nfd_common.c in Sources */,
+				030ABBE5204A1D4E00169214 /* faerg_allocator.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +357,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = faerg/faerg.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QM9YTQA8XQ;
 				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -335,6 +370,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harrylundstrom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "316fdd4b-ab1d-4fda-aeb8-940323bc9721";
+				PROVISIONING_PROFILE_SPECIFIER = faerg_mac_dev_profile;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -343,7 +380,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = faerg/faerg.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = QM9YTQA8XQ;
 				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 				GCC_C_LANGUAGE_STANDARD = c89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -353,6 +393,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harrylundstrom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fc571311-30e7-422c-b057-4920a91b9d4f";
+				PROVISIONING_PROFILE_SPECIFIER = faerg_mac_dist_profile;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

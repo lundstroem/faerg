@@ -2,26 +2,42 @@
 #import <stdio.h>
 #import "faerg_mac.h"
 #import "nfd.h"
+#import <Cocoa/Cocoa.h>
 
-static int open_dialog(void);
+static nfdchar_t* open_dialog(void);
 static int save_dialog(void);
 
-char *load_image(char *path) {
+char *load_image(void) {
     /* todo: load image with Cocoa and return pixel data */
-    open_dialog();
+    nfdchar_t *path = open_dialog();
+    if(path != NULL) {
+        NSString *pathString = [NSString stringWithUTF8String:path];
+        NSURL *url = [NSURL fileURLWithPath:pathString];
+        NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
+        
+        if(image) {
+            printf("image loaded\n");
+        } else {
+            printf("image failed\n");
+        }
+        free(path);
+    } else {
+        printf("path is null\n");
+    }
+    
     return NULL;
 }
 
-static int open_dialog(void) {
+static nfdchar_t* open_dialog(void) {
+    
     nfdchar_t *outPath = NULL;
     nfdresult_t result = NFD_OpenDialog("png,jpg", NULL, &outPath);
-    if ( result == NFD_OKAY )
+    
+    if (result == NFD_OKAY && outPath)
     {
-        puts("Success!");
-        puts(outPath);
-        free(outPath);
+        printf("Success!");
     }
-    else if ( result == NFD_CANCEL )
+    else if (result == NFD_CANCEL)
     {
         puts("User pressed cancel.");
     }
@@ -29,7 +45,8 @@ static int open_dialog(void) {
     {
         printf("Error: %s\n", NFD_GetError() );
     }
-    return 0;
+    
+    return outPath;
 }
 
 static int save_dialog(void) {
