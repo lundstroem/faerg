@@ -85,7 +85,7 @@ struct F_str *f_str_print(struct F_str *str, const char *fmt,...) {
     char *arg = NULL;
     char *temp_chars = NULL;
     if(str == NULL) {
-        const size_t default_size = 20;
+        const size_t default_size = 256;
         str = f_alloc(sizeof(struct F_str), "f_str");
         temp_chars = f_alloc((sizeof(char) * (default_size+1)), "f_str str print");
         for(i = 0; i < default_size+1; i++) {

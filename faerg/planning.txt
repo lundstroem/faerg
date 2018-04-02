@@ -1,0 +1,62 @@
+
+
+Top bar menu items
+
+------------------------
+Edit
+
+Undo                    Ctrl+Z
+Repeat                  Ctrl+Y
+
+Cut                     Ctrl+X
+Copy                    Ctrl+C
+Paste                   Ctrl+V
+Clear Selection         Del
+Select All              Ctrl+A
+
+Copy To...
+Paste From...
+------------------------
+
+
+------------------------
+View
+
+(toggle)Tool Box        Ctrl+T
+(toggle)Color Box       Ctrl+L
+(toggle)Status Bar
+(toggle)Text Toolbar
+
+Zoom ------->           Normal Size    Ctrl+PgUp
+View Bitmap Ctrl+F      Large Size    Ctrl+PgDn
+                        Custom...
+
+                        Show Grid    Ctrl+G
+                        Show Thumbnail
+------------------------
+
+------------------------
+Image
+
+Flip/Rotate...     Ctrl+R
+Stretch/Skew...    Ctrl+W
+Invert Colors    Ctrl+I
+Attributes...    Ctrl+E
+Clear Image    Ctrl+Shift+N
+(toggle)Draw Opaque
+------------------------
+
+------------------------
+Colors
+
+Edit Colors...
+------------------------
+
+
+------------------------
+Help
+
+Help Topics
+
+About Paint
+------------------------

@@ -45,6 +45,7 @@ static unsigned int palette[16] = {
 static struct F_UI_element *root_view = NULL;
 static f_bool needs_redraw = false;
 
+static void main_menu_create(void);
 static void calculate_frame_size_from_str(struct F_UI_element *e);
 static f_bool intersects(struct F_UI_rect frame, Uint32 x, Uint32 y);
 static void element_render(struct F_context f_context, struct F_UI_element *e);
@@ -61,52 +62,11 @@ static void char_render(struct F_context f_context, int sprite_x, int sprite_y,
                         unsigned int color, unsigned int bg_color);
 static void panel_render(struct F_context f_context, int x, int y,
                          int w, int h);
-
+static void menu_field_add(char *title, struct F_UI_element *menu_button);
 
 void f_ui_init(struct F_context f_context) {
-    
-    struct F_UI_element *e = NULL;
-    struct F_UI_element *file_element = NULL;
-    
     root_view = f_ui_element_new();
-    root_view->subviews = f_array_new();
-    
-    /* menu */
-    e = f_ui_element_new();
-    e->type = F_UI_MENU_BUTTON;
-    e->str = f_str_print(NULL, "File");
-    calculate_frame_size_from_str(e);
-    f_array_insert(root_view->subviews, e);
-    e->subviews = f_array_new();
-    file_element = e;
-    
-    e = f_ui_element_new();
-    e->type = F_UI_MENU_FIELD;
-    e->str = f_str_print(NULL, "New CMD+N");
-    e->frame.y = f_ui_char_height * 1;
-    calculate_frame_size_from_str(e);
-    f_array_insert(file_element->subviews, e);
-    
-    e = f_ui_element_new();
-    e->type = F_UI_MENU_FIELD;
-    e->str = f_str_print(NULL, "Open.. CMD+O");
-    e->frame.y = f_ui_char_height * 2;
-    calculate_frame_size_from_str(e);
-    f_array_insert(file_element->subviews, e);
-    
-    e = f_ui_element_new();
-    e->type = F_UI_MENU_FIELD;
-    e->str = f_str_print(NULL, "Save CMD+S");
-    e->frame.y = f_ui_char_height * 3;
-    calculate_frame_size_from_str(e);
-    f_array_insert(file_element->subviews, e);
-    
-    e = f_ui_element_new();
-    e->type = F_UI_MENU_FIELD;
-    e->frame.y = f_ui_char_height * 4;
-    e->str = f_str_print(NULL, "Save as..");
-    calculate_frame_size_from_str(e);
-    f_array_insert(file_element->subviews, e);
+    main_menu_create();
 }
 
 f_bool f_ui_screen_update(struct F_context f_context) {
@@ -122,6 +82,89 @@ void f_ui_screen_draw(struct F_context f_context) {
 
 void f_ui_cleanup(struct F_context f_context) {
     element_recursive_cleanup(f_context, root_view);
+}
+
+struct F_UI_rect f_ui_rect_make(int x, int y, int w, int h) {
+    struct F_UI_rect rect;
+    rect.x = x;
+    rect.y = y;
+    rect.w = w;
+    rect.h = h;
+    return rect;
+}
+
+struct F_UI_element *f_ui_element_new(void) {
+    struct F_UI_element *e = f_alloc(sizeof(struct F_UI_element), "F_UI_element");
+    e->pressed = false;
+    e->hovered = false;
+    e->toggled = false;
+    e->visible = true;
+    e->frame = f_ui_rect_make(0, 0, 0, 0);
+    e->type = F_UI_UNDEFINED;
+    e->subviews = NULL;
+    e->str = NULL;
+    e->superview = NULL;
+    return e;
+}
+
+void f_ui_subview_add(struct F_UI_element *subview, struct F_UI_element *superview) {
+    if(superview) {
+        if(superview->subviews == NULL) {
+            superview->subviews = f_array_new();
+        }
+        f_array_insert(superview->subviews, subview);
+        subview->superview = superview;
+    }
+}
+
+/* private functions */
+
+static void main_menu_create(void) {
+    struct F_UI_element *menu_button = NULL;
+    struct F_UI_element *menu = NULL;
+    int x_offset = 16;
+    
+    menu = f_ui_element_new();
+    menu->type = F_UI_MENU;
+    f_ui_subview_add(menu, root_view);
+    
+    menu_button = f_ui_element_new();
+    menu_button->type = F_UI_MENU_BUTTON;
+    menu_button->str = f_str_print(NULL, "File  ");
+    calculate_frame_size_from_str(menu_button);
+    menu_button->frame.x = x_offset;
+    x_offset += menu_button->frame.w;
+    menu_field_add("New     CMD+N", menu_button);
+    menu_field_add("Open..  CMD+O", menu_button);
+    menu_field_add("Save    CMD+S", menu_button);
+    menu_field_add("Save as..", menu_button);
+    f_ui_subview_add(menu_button, menu);
+    
+    menu_button = f_ui_element_new();
+    menu_button->type = F_UI_MENU_BUTTON;
+    menu_button->str = f_str_print(NULL, "Edit  ");
+    calculate_frame_size_from_str(menu_button);
+    menu_button->frame.x = x_offset;
+    x_offset += menu_button->frame.w;
+    menu_field_add("Undo            CMD+Z", menu_button);
+    menu_field_add("Repeat          CMD+Y", menu_button);
+    menu_field_add("Cut             CMD+S", menu_button);
+    menu_field_add("Copy            CMD+C", menu_button);
+    menu_field_add("Paste           CMD+C", menu_button);
+    menu_field_add("Clear Selection CMD+C", menu_button);
+    menu_field_add("Select All      CMD+C", menu_button);
+    f_ui_subview_add(menu_button, menu);
+}
+
+static void menu_field_add(char *title, struct F_UI_element *menu_button) {
+    struct F_UI_element *e = f_ui_element_new();
+    e->type = F_UI_MENU_FIELD;
+    e->visible = false;
+    e->str = f_str_print(NULL, title);
+    calculate_frame_size_from_str(e);
+    e->frame.x = menu_button->frame.x;
+    f_ui_subview_add(e, menu_button);
+    e->frame.y = f_ui_char_height * menu_button->subviews->size;
 }
 
 static void calculate_frame_size_from_str(struct F_UI_element *e) {
@@ -142,6 +185,7 @@ static f_bool intersects(struct F_UI_rect frame, Uint32 x, Uint32 y) {
 
 static void element_recursive_update(struct F_context f_context, struct F_UI_element *e) {
     int i;
+    struct F_UI_element *intersected_element = NULL;
     if(e) {
         switch (e->type) {
             case F_UI_LABEL:
@@ -150,20 +194,41 @@ static void element_recursive_update(struct F_context f_context, struct F_UI_ele
                 break;
             case F_UI_ICON_BUTTON:
                 break;
-            case F_UI_MENU_BUTTON:
-                if(intersects(e->frame, f_context.mouse_x, f_context.mouse_y)) {
-                    if(!e->hovered) {
-                        needs_redraw = true;
+            case F_UI_MENU:
+                for(i = 0; i < e->subviews->size; i++) {
+                    struct F_UI_element *subview = e->subviews->data[i];
+                    if(intersects(subview->frame, f_context.mouse_x, f_context.mouse_y) && f_context.mouse_event == F_UI_EVENT_MOUSE_DOWN) {
+                        e->toggled = !e->toggled;
+                    } else if(e->toggled && intersects(subview->frame, f_context.mouse_x, f_context.mouse_y)) {
+                        subview->toggled = true;
+                        intersected_element = subview;
+                    } else if(!e->toggled) {
+                        subview->toggled = false;
                     }
-                    e->hovered = true;
-                } else {
-                    if(e->hovered) {
-                        needs_redraw = true;
-                    }
-                    e->hovered = false;
                 }
+                if(intersected_element) {
+                    for(i = 0; i < e->subviews->size; i++) {
+                        struct F_UI_element *subview = e->subviews->data[i];
+                        if(subview != intersected_element) {
+                            subview->toggled = false;
+                        }
+                    }
+                }
+                break;
+            case F_UI_MENU_BUTTON:
                 break;
             case F_UI_MENU_FIELD:
+                if(e->superview && e->superview->toggled) {
+                    if(!e->visible) {
+                        e->visible = true;
+                        needs_redraw = true;
+                    }
+                } else {
+                    if(e->visible) {
+                        e->visible = false;
+                        needs_redraw = true;
+                    }
+                }
                 if(intersects(e->frame, f_context.mouse_x, f_context.mouse_y)) {
                     if(!e->hovered) {
                         needs_redraw = true;
@@ -176,7 +241,7 @@ static void element_recursive_update(struct F_context f_context, struct F_UI_ele
                     e->hovered = false;
                 }
                 break;
-            case F_UI_PANEL:
+            case F_UI_WINDOW:
                 break;
             case F_UI_UNDEFINED:
                 break;
@@ -218,7 +283,7 @@ static struct F_UI_element *element_cleanup(struct F_UI_element *e) {
         if(e->str) {
             e->str = f_str_cleanup(e->str);
         }
-        e->parent = NULL;
+        e->superview = NULL;
         f_free(e);
     }
     return NULL;
@@ -251,6 +316,8 @@ static void element_render(struct F_context f_context, struct F_UI_element *e) {
                 break;
             case F_UI_ICON_BUTTON:
                 break;
+            case F_UI_MENU:
+                break;
             case F_UI_MENU_BUTTON:
                 if(e->hovered) {
                     label_render(f_context, e->str->chars, e->frame.x, e->frame.y, palette[4], palette[0]);
@@ -265,43 +332,11 @@ static void element_render(struct F_context f_context, struct F_UI_element *e) {
                     label_render(f_context, e->str->chars, e->frame.x, e->frame.y, palette[6], palette[0]);
                 }
                 break;
-            case F_UI_PANEL:
+            case F_UI_WINDOW:
                 break;
             case F_UI_UNDEFINED:
                 break;
         }
-    }
-}
-
-struct F_UI_rect f_ui_rect_make(int x, int y, int w, int h) {
-    struct F_UI_rect rect;
-    rect.x = x;
-    rect.y = y;
-    rect.w = w;
-    rect.h = h;
-    return rect;
-}
-
-struct F_UI_element *f_ui_element_new(void) {
-    struct F_UI_element *e = f_alloc(sizeof(struct F_UI_element), "F_UI_element");
-    e->pressed = false;
-    e->hovered = false;
-    e->toggleable = false;
-    e->visible = true;
-    e->frame = f_ui_rect_make(0, 0, 0, 0);
-    e->type = F_UI_UNDEFINED;
-    e->subviews = NULL;
-    e->parent = NULL;
-    return e;
-}
-
-void f_ui_subview_add(struct F_UI_element *parent, struct F_UI_element *child) {
-    if(parent) {
-        if(parent->subviews == NULL) {
-            parent->subviews = f_array_new();
-        }
-        f_array_insert(parent->subviews, child);
-        child->parent = parent;
     }
 }
 
@@ -318,7 +353,7 @@ static void label_render(struct F_context f_context, char *string, int s_x, int 
     for(i = 0; i < len; i++) {
         char c = string[i];
         int x_char_pos = get_char_pos(c);
-        char_render(f_context, s_x + (i*f_ui_char_width), s_y, x_char_pos, 0, true, color, bg_color);
+        char_render(f_context, s_x + (i * f_ui_char_width), s_y, x_char_pos, 0, true, color, bg_color);
     }
 }
 

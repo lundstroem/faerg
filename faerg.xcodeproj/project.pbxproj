@@ -11,6 +11,7 @@
 		030ABBE2204A164A00169214 /* faerg_data_structures.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBE1204A164A00169214 /* faerg_data_structures.c */; };
 		030ABBE5204A1D4E00169214 /* faerg_allocator.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBE4204A1D4E00169214 /* faerg_allocator.c */; };
 		030ABBE8204A295100169214 /* faerg_str.c in Sources */ = {isa = PBXBuildFile; fileRef = 030ABBE7204A295100169214 /* faerg_str.c */; };
+		0325226120729C9500AFD38E /* planning.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0325226020729C9500AFD38E /* planning.txt */; };
 		035750B42049F43400869A96 /* faerg_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 035750B32049F43400869A96 /* faerg_ui.c */; };
 		0357D5E32041EE8C002FF3AF /* nfd_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5DB2041EE8C002FF3AF /* nfd_cocoa.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		0357D5E42041EE8C002FF3AF /* nfd_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5DD2041EE8C002FF3AF /* nfd_common.c */; };
@@ -43,6 +44,7 @@
 		030ABBE4204A1D4E00169214 /* faerg_allocator.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_allocator.c; sourceTree = "<group>"; };
 		030ABBE6204A295100169214 /* faerg_str.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_str.h; sourceTree = "<group>"; };
 		030ABBE7204A295100169214 /* faerg_str.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_str.c; sourceTree = "<group>"; };
+		0325226020729C9500AFD38E /* planning.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = planning.txt; sourceTree = "<group>"; };
 		035750B22049F43400869A96 /* faerg_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_ui.h; sourceTree = "<group>"; };
 		035750B32049F43400869A96 /* faerg_ui.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = faerg_ui.c; sourceTree = "<group>"; };
 		035750B52049F8FB00869A96 /* faerg_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = faerg_common.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				0357D5BC2041AD4C002FF3AF /* faerg.entitlements */,
 				03C7A1CC2039B5B5009ACD89 /* faerg-Info.plist */,
 				03C7A1CD2039B5B5009ACD89 /* InfoPlist.strings */,
+				0325226020729C9500AFD38E /* planning.txt */,
 			);
 			path = faerg;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C7A1D12039B5B5009ACD89 /* InfoPlist.strings in Resources */,
+				0325226120729C9500AFD38E /* planning.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

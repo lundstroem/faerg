@@ -40,6 +40,7 @@ static void on_resize_window(void);
 static void quit(void);
 static void init_renderer(void);
 static void print_info(void);
+static void reset_input(void);
 
 static struct F_context f_context;
 
@@ -49,6 +50,7 @@ int main (int argc, char **argv)
     f_context.window = NULL;
     f_context.texture = NULL;
     f_context.renderer = NULL;
+    f_context.needs_redraw = true;
     f_context.quit = false;
     f_context.width = 640;
     f_context.height = 480;
@@ -60,6 +62,7 @@ int main (int argc, char **argv)
     f_allocator_init();
     init_video();
     init_data();
+    f_ui_init(f_context);
     print_info();
     redraw_screen();
     update();
@@ -120,28 +123,33 @@ static void init_renderer(void) {
 static void init_data(void) {
     int r;
     if(f_context.framebuffer != NULL) {
-        free(f_context.framebuffer);
+        f_free(f_context.framebuffer);
         f_context.framebuffer = NULL;
     }
     f_context.framebuffer = (unsigned int *) f_alloc((f_context.width * f_context.height) * sizeof(unsigned int), "context framebuffer");
     for(r = 0; r < f_context.width * f_context.height; r++) {
         f_context.framebuffer[r] = 0;
     }
-    f_ui_init(f_context);
 }
 
-static void update() {
+static void update(void) {
+    f_bool redraw_ui = false;
     while (!f_context.quit) {
-        f_bool needs_redraw = false;
         poll_events();
-        needs_redraw = update_screen();
-        if(needs_redraw) {
+        redraw_ui = update_screen();
+        if(f_context.needs_redraw || redraw_ui) {
             redraw_screen();
+            f_context.needs_redraw = false;
             f_log("redraw");
         }
+        reset_input();
         render();
         delay();
     }
+}
+
+static void reset_input(void) {
+    f_context.mouse_event = F_UI_EVENT_MOUSE_NONE;
 }
 
 static void delay(void) {
@@ -165,7 +173,7 @@ static void render(void) {
     SDL_RenderPresent(f_context.renderer);
 }
 
-static void quit() {
+static void quit(void) {
     if(f_context.texture != NULL) {
         SDL_DestroyTexture(f_context.texture);
     }
@@ -188,6 +196,7 @@ static void quit() {
 static void on_resize_window(void) {
     init_data();
     init_renderer();
+    f_context.needs_redraw = true;
 }
 
 static void poll_events(void) {
@@ -201,12 +210,11 @@ static void poll_events(void) {
                 f_context.quit = true;
                 break;
             case SDL_MOUSEBUTTONDOWN:
-                f_context.mouse_x = event.motion.x;
-                f_context.mouse_y = event.motion.y;
-                f_context.mouse_state_down = true;
-                f_context.mouse_event = F_UI_EVENT_MOUSE_DOWN;
                 if(event.button.button == SDL_BUTTON_LEFT) {
-                    /* todo: action for left/right mouse */
+                    f_context.mouse_x = event.motion.x;
+                    f_context.mouse_y = event.motion.y;
+                    f_context.mouse_state_down = true;
+                    f_context.mouse_event = F_UI_EVENT_MOUSE_DOWN;
                 }
                 if(event.button.button == SDL_BUTTON_RIGHT) {
                     /* todo: action for left/right mouse */
@@ -217,12 +225,11 @@ static void poll_events(void) {
                 f_context.mouse_y = event.motion.y;
                 break;
             case SDL_MOUSEBUTTONUP:
-                f_context.mouse_x = event.motion.x;
-                f_context.mouse_y = event.motion.y;
-                f_context.mouse_state_down = false;
-                f_context.mouse_event = F_UI_EVENT_MOUSE_UP;
                 if(event.button.button == SDL_BUTTON_LEFT) {
-                    /* todo: action for left/right mouse */
+                    f_context.mouse_x = event.motion.x;
+                    f_context.mouse_y = event.motion.y;
+                    f_context.mouse_state_down = false;
+                    f_context.mouse_event = F_UI_EVENT_MOUSE_UP;
                 }
                 if(event.button.button == SDL_BUTTON_RIGHT) {
                     /* todo: action for left/right mouse */
@@ -263,6 +270,7 @@ static void poll_events(void) {
                         /*SDL_Log("Window %d size changed to %dx%d",
                                 event.window.windowID, event.window.data1,
                                 event.window.data2);*/
+                        f_context.needs_redraw = true;
                         break;
                     case SDL_WINDOWEVENT_MINIMIZED:
                         /*SDL_Log("Window %d minimized", event.window.windowID);*/

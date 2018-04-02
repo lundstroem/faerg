@@ -28,6 +28,7 @@ struct F_context {
     SDL_Window *window;
     SDL_Renderer *renderer;
     SDL_Texture *texture;
+    f_bool needs_redraw;
     f_bool quit;
     Uint32 *framebuffer;
     Uint32 width;
@@ -35,6 +36,8 @@ struct F_context {
     Uint32 mouse_x;
     Uint32 mouse_y;
     f_bool mouse_state_down;
+    f_bool mouse_state_down_event;
+    f_bool mouse_state_up_event;
     enum F_UI_mouse_event mouse_event;
 };
 
